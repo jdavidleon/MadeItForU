@@ -1,0 +1,97 @@
+RewriteEngine On
+
+ErrorDocument 404 http:/page-not-found/
+
+RewriteCond %{HTTP_HOST} ^madeitforu.com [NC]
+RewriteRule ^(.*)$ http://www.madeitforu.com/$1 [R=301,L]
+
+## PAGES/INDEX.PHP GET_RULES ##
+
+	##PAGES##
+	RewriteRule ^en/pages/([a-z]+)/$ en/pages/?page=$1 [NC]
+	RewriteRule ^en/pages/([a-z]+)$ en/pages/?page=$1 [NC]
+	RewriteRule ^es/pages/([a-z]+)/$ es/pages/?page=$1 [NC]
+	RewriteRule ^es/pages/([a-z]+)$ es/pages/?page=$1 [NC]
+
+	RewriteRule ^es/pages/activate/(.*)/(.*)/([a-z]+)$ es/pages/?page=activate&mail=$1&token=$2&process=$3 [NC]
+	RewriteRule ^en/pages/activate/(.*)/(.*)/([a-z]+)$ en/pages/?page=activate&mail=$1&token=$2&process=$3 [NC]
+
+	RewriteRule ^en/pages/login/([a-z]+)/([A-Z_]+)/(.*)$ en/pages/?page=login&result=$1&msn=$2&link=$3 [NC]
+	RewriteRule ^es/pages/login/([a-z]+)/([A-Z_]+)/(.*)$ es/pages/?page=login&result=$1&msn=$2&link=$3 [NC]
+
+	RewriteRule ^es/pages/signup/(.*)/(.*)$ es/pages/?page=signup&msn=$1&mail=$2 [NC]
+	RewriteRule ^en/pages/signup/(.*)/(.*)$ en/pages/?page=signup&msn=$1&mail=$2 [NC]
+
+	RewriteRule ^es/pages/forgotpassword/([a-z]+)/([A-z_]+)/(.*)$ es/pages/?page=forgotpassword&result=$1&msn=$2&mail=$3 [NC]
+	RewriteRule ^en/pages/forgotpassword/([a-z]+)/([A-z_]+)/(.*)$ en/pages/?page=forgotpassword&result=$1&msn=$2&mail=$3 [NC]
+
+	RewriteRule ^es/pages/restore/(.*)/(.*)$ es/pages/?page=restore&token=$1&mail=$2 [NC]
+	RewriteRule ^en/pages/restore/(.*)/(.*)$ en/pages/?page=restore&token=$1&mail=$2 [NC]
+
+	RewriteRule ^es/pages/restore_account/([a-z]+)/([A-z_]+)/(.*)/(.*)$ es/pages/?page=restore_account&result=$1&msn=$2&token=$3&mail=$4 [NC]
+	RewriteRule ^en/pages/restore_account/([a-z]+)/([A-z_]+)/(.*)/(.*)$ en/pages/?page=restore_account&result=$1&msn=$2&token=$3&mail=$4 [NC]
+
+	RewriteRule ^es/pages/contact/([a-z]+)/([A-Z_]+)$ es/pages/?page=contact&result=$1&msn=$2 [NC]
+	RewriteRule ^en/pages/contact/([a-z]+)/([A-Z_]+)$ en/pages/?page=contact&result=$1&msn=$2 [NC]
+
+	RewriteRule ^es/pages/newsletter_unsubscribe/(.*)/(.*)$ es/pages/?page=newsletter_unsubscribe&token=$1&mail=$2 [NC]
+	RewriteRule ^en/pages/newsletter_unsubscribe/(.*)/(.*)$ en/pages/?page=newsletter_unsubscribe&token=$1&mail=$2 [NC]
+
+
+	##BUSSINESS##
+	RewriteRule ^en/bussiness/([a-z_]+)/$ en/bussiness/?page=$1 [NC]
+	RewriteRule ^en/bussiness/([a-z_]+)$ en/bussiness/?page=$1 [NC]
+	RewriteRule ^es/bussiness/([a-z_]+)/$ es/bussiness/?page=$1 [NC]
+	RewriteRule ^es/bussiness/([a-z_]+)$ es/bussiness/?page=$1 [NC]
+
+	RewriteRule ^en/bussiness/payment/([0-9-]+)/(.*)/([a-z]+)/$ en/bussiness/?page=payment&serial=$1&token=$2&state=$3 [NC]
+	RewriteRule ^es/bussiness/payment/([0-9-]+)/(.*)/([a-z]+)/$ es/bussiness/?page=payment&serial=$1&token=$2&state=$3 [NC]
+
+
+	##USERS##
+	RewriteRule ^en/user/([a-z-]+)/$ en/user/?page=$1 [NC]
+	RewriteRule ^en/user/([a-z-]+)$ en/user/?page=$1 [NC]
+	RewriteRule ^es/user/([a-z-]+)/$ es/user/?page=$1 [NC]
+	RewriteRule ^es/user/([a-z-]+)$ es/user/?page=$1 [NC]
+	
+	RewriteRule ^en/user/([a-z-]+)/([a-z]+)/([A-z_]+)/$ en/user/?page=$1&bd=$2&msn=$3 [NC]
+	RewriteRule ^es/user/([a-z-]+)/([a-z]+)/([A-z_]+)/$ es/user/?page=$1&bd=$2&msn=$3 [NC]
+
+
+	##CHECKOUT##
+	RewriteRule ^en/checkout/([a-z]+)/$ en/checkout/?page=$1 [NC]
+	RewriteRule ^en/checkout/([a-z]+)$ en/checkout/?page=$1 [NC]
+	RewriteRule ^es/checkout/([a-z]+)/$ es/checkout/?page=$1 [NC]
+	RewriteRule ^es/checkout/([a-z]+)$ es/checkout/?page=$1 [NC]
+
+	RewriteRule ^en/checkout/([a-z]+)/(.*)/(.*)/([0-9]+)/$ en/checkout/?page=$1&token=$2&spyty=$3&ctptpay=$4 [NC]
+	RewriteRule ^es/checkout/([a-z]+)/(.*)/(.*)/([0-9]+)/$ es/checkout/?page=$1&token=$2&spyty=$3&ctptpay=$4 [NC]
+
+	RewriteRule ^en/checkout/address/(.*)/(.*)/([0-9]+)/([a-z]+)/([A-z_]+)/$ en/checkout/?page=address&token=$1&spyty=$2&ctptpay=$3&bd=$4&msn=$5 [NC]
+	RewriteRule ^es/checkout/address/(.*)/(.*)/([0-9]+)/([a-z]+)/([A-z_]+)/$ es/checkout/?page=address&token=$1&spyty=$2&ctptpay=$3&bd=$4&msn=$5 [NC]
+
+	RewriteRule ^en/checkout/basket/([a-z]+)/([A-Z_]+)/$ en/checkout/?page=basket&action=$2&alert=$3 [NC]
+	RewriteRule ^es/checkout/basket/([a-z]+)/([A-Z_]+)/$ es/checkout/?page=basket&action=$2&alert=$3 [NC]
+
+	##BREACKFAST##
+	RewriteRule ^en/breakfast/(.*)/$ en/breakfast/?breakfast=$1 [NC]
+	RewriteRule ^es/breakfast/(.*)/$ es/breakfast/?breakfast=$1 [NC]
+
+## PAGES/INDEX.PHP GET_RULES ##
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 second"
+ExpiresByType image/jpeg "access 1 second"
+ExpiresByType image/gif "access 1 second"
+ExpiresByType image/png "access 1 second"
+ExpiresByType text/css "access 1 second"
+ExpiresByType text/html "access 1 second"
+ExpiresByType application/pdf "access 1 second"
+ExpiresByType text/x-javascript "access 1 second"
+ExpiresByType application/x-shockwave-flash "access 1 second"
+ExpiresByType image/x-icon "access 1 second"
+ExpiresDefault "access plus 1 second"
+</IfModule>
+## EXPIRES CACHING ##

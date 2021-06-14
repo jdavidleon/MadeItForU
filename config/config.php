@@ -1,8 +1,7 @@
-<?php 
-
-	define("URL_BASE", "/delicious/");
-	define("DIRECTORIO_ROOT",$_SERVER["DOCUMENT_ROOT"] . "/delicious/");
-	define('URL_PAGE', '/delicious/');
+<?php
+	define("URL_BASE", "/");
+	define("DIRECTORIO_ROOT",$_SERVER["DOCUMENT_ROOT"] . "/");
+	define('URL_PAGE', 'http://madeitforu.juandleon.com/');
 	
 
 
@@ -15,7 +14,7 @@
 	define('SALTPSW', '$%imund9489//8=mo');
 
 	//Sistema Horario
-	date_default_timezone_set('America/New_York');
+	date_default_timezone_set('America/Bogota');
 	
 	
 	

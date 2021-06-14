@@ -1,10 +1,5 @@
 <?php 
 
-/**
-* Payment platform to colombia (PayU LATAM)
-* Developed by David León
-* Web Developer: jdevweb.com
-*/
 class PaymentPAUY extends Secure
 {
 	const API_KEY = ""; //Ingrese aquí su propio apiKey.

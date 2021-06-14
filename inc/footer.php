@@ -50,7 +50,7 @@
                                     |
                                     <a href="<?php echo URL_BASE.$lang.'/bussiness/terms/#cookies' ?>">Política de Cookies</a>
                                 </small><br>
-                                Designed by <a href="https://juandleon.com/">juandleon.com</a>
+
                             </div>
                         </p>
                     </div>

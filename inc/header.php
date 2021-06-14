@@ -62,7 +62,7 @@
     <link href="https://fonts.googleapis.com/css?family=Belgrano|Coming+Soon|Open+Sans:400,600|PT+Sans|Raleway:500|Satisfy|Unkempt|Bowlby+One" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE; ?>css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE; ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE; ?>css/style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE; ?>css/animate.css">
     <!-- OwlCarrousel -->
@@ -72,42 +72,6 @@
 
     <link type="text/css" href="<?php echo URL_BASE; ?>css/custom.css"  rel="stylesheet">
 
-    <!-- =======================================================
-        Theme Name: MADEITFORU
-        Author: jwebdev.com
-        Author URL: https://jdevweb.com
-    ======================================================= -->
-
-
-
-   		<!-- Facebook Pixel Code -->
-		<script>
-		  !function(f,b,e,v,n,t,s)
-		  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-		  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-		  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-		  n.queue=[];t=b.createElement(e);t.async=!0;
-		  t.src=v;s=b.getElementsByTagName(e)[0];
-		  s.parentNode.insertBefore(t,s)}(window, document,'script',
-		  'https://connect.facebook.net/en_US/fbevents.js');
-		  fbq('init', '131895280742563');
-		  fbq('track', 'PageView');
-		</script>
-		<noscript><img height="1" width="1" style="display:none"
-		  src="https://www.facebook.com/tr?id=131895280742563&ev=PageView&noscript=1"
-		/></noscript>
-		<!-- End Facebook Pixel Code -->
-
-    	<!-- Global site tag (gtag.js) - Google Analytics -->
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108104933-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-108104933-1');
-		</script>
 
 
 </head>

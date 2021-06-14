@@ -19,7 +19,7 @@
 		}
 
 		function __construct(){
-			$this->_connection = new mysqli("localhost","root","","mifu_bd");
+			$this->_connection = new mysqli("localhost","mifu_bd","mifu_bd","mifu_bd");
 
 			// manejar error
 			if (mysqli_connect_error()) {

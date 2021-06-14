@@ -8,13 +8,13 @@
 <label><?php echo $signUpM->gender; ?></label><br>
 <div class="radio-inline" style="margin-left: 10px;">
   <label>
-    <input type="radio" name="sexo" id=""  value="F" required>
+    <input type="radio" name="sexo"  value="F" required>
     <?php echo $signUpM->gender_woman; ?>
   </label>
 </div>
 <div class="radio-inline">
   <label>
-    <input type="radio" name="sexo" id="" value="M" required>
+    <input type="radio" name="sexo" value="M" required>
     <?php echo $signUpM->gender_man; ?>
   </label>
 </div>
@@ -52,7 +52,7 @@
 
 <div class="form-group">
   <label><?php echo $signUpM->psw; ?></label>
-  <input type="password" class="form-control" id="" name="clave" required>  
+  <input type="password" class="form-control" name="clave" required>
   <span class="hide required text-danger">
   	<i class="fa fa-times-circle" aria-hidden="true">
   		<?php echo $formTXT->required; ?></i><br>

@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="footer-copyright">
-            © <?php echo date('Y'); ?> Desarrollado por <a href="" style="color: black;"> jwebdev.com</a>
+            © <?php echo date('Y'); ?> Todos los derechos reservados</a>
           </div>
         </div>
       </div>

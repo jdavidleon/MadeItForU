@@ -20,40 +20,45 @@
 			// }
 
 			$tablesToDelete = [
-				// 'cedulas',
-				// 'testimonials_img',
-				// 'testimonials_msn',
-				// 'usuarios',
-				// 'usuarios_direcciones',
-				// 'usuarios_intentos',
-				// 'usuarios_restaurar_psw',
-				// 'usuario_cupon',
-				// 'categorias',
-				// 'categorias_sub',
-				// 'mantenimiento',
-				// 'mantenimiento_ip',
-				// 'bolsa_compras',
-				// 'productos',
-				// 'productos_imagenes',
-				// 'productos_imagenes_principales',
-				// 'productos_cantidad',
-				// 'productos_items',
-				// 'productos_item',
-				// 'productos_items_tipos',
-				// 'productos_descuento',
-				// 'productos_con_items',
-				// 'estados',
-				// 'ventas',
-				// 'venta_detalle',
-				// 'productos_publicados',
-				// 'venta_token',
-				// 'newsletter',
-				// 'contactenos',
-				// 'venta_personalizar',
-				// 'tipos_cupones',
-				// 'productos_cupones',
-				// 'ingreso_productos_gral',
-				// 'estados_pedido'
+				 'cedulas',
+				 'testimonials_img',
+				 'testimonials_msn',
+				 'usuarios',
+				 'usuarios_direcciones',
+				 'usuarios_intentos',
+				 'usuarios_restaurar_psw',
+				 'usuario_cupon',
+				 'categorias',
+				 'categorias_sub',
+				 'mantenimiento',
+				 'mantenimiento_ip',
+				 'bolsa_compras',
+				 'productos',
+				 'productos_imagenes',
+				 'productos_imagenes_principales',
+				 'productos_cantidad',
+				 'productos_items',
+				 'productos_item',
+				 'productos_items_tipos',
+				 'productos_descuento',
+				 'productos_con_items',
+				 'estados',
+				 'ventas',
+				 'venta_detalle',
+				 'productos_publicados',
+				 'venta_token',
+				 'newsletter',
+				 'contactenos',
+				 'venta_personalizar',
+				 'tipos_cupones',
+				 'productos_cupones',
+				 'ingreso_productos_gral',
+				 'estados_pedido',
+                 'roles',
+                'usuarios_lang',
+                'ofertas',
+                'ofertas_descuentos',
+                'ciudades'
 			];
 			
 			if ($this->deleteTable($tablesToDelete) === true) {
@@ -70,8 +75,7 @@
 			
 			/*Definiendo administradores*/
 			$usuarios = [
-				['JUAN DAVID','LEON PONCE','jlp25@hotmail.com','M',1,'ctlb31207',1],
-				['ANA LUCIA','BARONA','gifts@madeitforu.com','F',1,'anabarona2017',1]
+				['JUAN DAVID','LEON PONCE','jlp25@hotmail.com','M',1,'admin_poli_123',1],
 			];
 
 			foreach ($usuarios as $usuario) {
@@ -250,34 +254,6 @@
 			$this->ubicaciones();
 		}
 
-		private function cedulas()
-		{
-			$tiempoInicial = microtime(true);
-			for ($i=0; $i <= 700000; $i++) { 
-				$set = [
-					'cedula' => Secure::numeroAleatoreo(9),
-					'nombre' => Secure::letrasAleatoreo(9)
-				];
-				$insertar = CRUD::insert('cedulas',$set);
-			}
-			// $ar=fopen("datos.php","a") or
-			//     die("Problemas en la creacion");
-			// fputs($ar,'<?php [ ');
-			// fputs($ar,"\n");
-			// fputs($ar,'[938174725,"calJCyoHb"],');
-
-			// foreach ($set as $key => $value) {
-			// 	fputs($ar,"[".$value['cedula'].", '".$value['nombre']."'], \n");
-			// }
-
-			// fputs($ar,"\n");
-			// fputs($ar," ]");
-			// fputs($ar,"\n");
-			// fclose($ar);
-
-			echo (microtime(true) - $tiempoInicial) / 60;
-		}
-
 		private function runTables()
 		{	
 			/*
@@ -291,15 +267,6 @@
 					6 => $default='data'
 				]
 			*/
-
-			$tables[] = [
-				'nombre' => 'cedulas',
-				'filas' => [
-					['id_cedula','INT(11)',true,true,true,true,''],
-					['cedula','BIGINT(15)',true,true,false,false,''],
-					['nombre','VARCHAR(100)',false,true,false,false,'']
-				]
-			];
 
 			$tables[] = [
 				'nombre' => 'mantenimiento',
@@ -841,7 +808,8 @@
 			
 			if ($crearTabla === true) {
 				$estado = 'CREADA';
-			}else{				
+			}else{
+			    var_dump($sql);
 				$estado = 'ERROR AL CREAR LA TABLA';
 			} 
 			echo "<table style='width:50%; min-width: 200px; margin: 0 auto; border: 1px solid grey;'>

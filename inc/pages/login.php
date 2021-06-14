@@ -7,7 +7,7 @@
         <?php if (isset($_GET['result']) AND $_GET['result'] === 'error'): ?>
 
             <small class="text-danger text-center">
-                <?php echo $error->$_GET['msn']; ?>
+                <?php echo $error->{$_GET['msn']}; ?>
             </small>
 
         <?php endif ?>
